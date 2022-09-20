@@ -1,0 +1,30 @@
+<h1 class="heading">User Details</h1>
+<div class="input-box">
+  <label for="fname">User name:</label>
+  <input
+    type="text"
+    id="fname"
+    name="firstname"
+    placeholder="John" (input)="updatename($event)" />
+</div>
+
+<section
+  style="display:grid; align-items:center;">
+  <div class="card" *ngIf="!personName; else noname">
+    <img src='{{cimg}}' style="width:100%"/>
+    <!-- Name -->
+    <h1>{{ cname }}</h1>
+    <!-- Designation -->
+    <p class="title">{{ cdesgn}}</p>
+    <!-- University -->
+    <p>{{ cuniv }}</p>
+    <!-- City -->
+    <p>{{ ccity}}</p>
+  </div>
+  <ng-template #noname>
+   <div class="card-text">
+    No Results Found
+  </div>
+  </ng-template>
+  
+</section>
